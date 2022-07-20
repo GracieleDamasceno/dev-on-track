@@ -11,14 +11,13 @@ exclude:
 # Site settings
 title: Dev On Track!
 subtitle:
-email: damascenograciele@gmail.com
 name: Graciele Damasceno
 description: >
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+baseurl: "/dev-on-track" # the subpath of your site, e.g. /blog/
+url: "https://gracieledamasceno.github.io" # the base hostname & protocol for your site
 cover: "/assets/header-image.jpg"
 logo: "/assets/logo-dot.png"
 
@@ -45,8 +44,8 @@ jekyll-archives:
     category: '/category/:name/'
     tag: '/tag/:name/'
 
-# Disqus comments
-# disqus_shortname: bencentra
+#Disqus comments
+disqus_shortname: https-gracieledamasceno-github-io-dev-on-track
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"

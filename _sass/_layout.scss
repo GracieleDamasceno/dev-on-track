@@ -257,11 +257,11 @@ pre code.hljs {
 	}
 	.site-header-container {
 		color: $white;
-		text-shadow: 0 2px 1px rgba(0,0,0,0.33);
 		background-color: $highlight-color;
 		.site-header{
 			.title {
-				color: #9ed8ff;
+				color: $white;
+				text-shadow: -3px 0 #8e44ad, 0 5px #8e44ad, 5px 0 #8e44ad, 0 -3px black;
 				font-size: modular-scale(6);
 			}
 			.subtitle {

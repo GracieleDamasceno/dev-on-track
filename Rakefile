@@ -9,8 +9,7 @@ require "jekyll"
 GITHUB_REPONAME = "GracieleDamasceno/dev-on-track"
 
 
-namespace :site do
-  desc "Generate blog files"
+desc "Generate static site"
   task :generate do
     Jekyll::Site.new(Jekyll.configuration({
       "source"      => ".",
@@ -18,24 +17,23 @@ namespace :site do
     })).process
   end
 
-
-  desc "Generate and publish blog to gh-pages"
+  desc "Generate and publich blog"
   task :publish => [:generate] do
     Dir.mktmpdir do |tmp|
       cp_r "_site/.", tmp
 
       pwd = Dir.pwd
       Dir.chdir tmp
+      File.open(".nojekyll", "wb") { |f| f.puts("Site gerado localmente.") }
 
-      system "git init"
+      system "git init"  
       system "git add ."
       message = "Site updated at #{Time.now.utc}"
       system "git commit -m #{message.inspect}"
       system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
-      system "git push origin master:refs/heads/gh-pages --force"
+      system "git checkout -b gh-pages"
+      system "git push origin gh-pages --force"
 
       Dir.chdir pwd
     end
   end
-end
-
