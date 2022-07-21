@@ -12,7 +12,8 @@ exclude:
 title: Dev On Track!
 subtitle:
 name: Graciele Damasceno
-description: >
+description: > 
+  Welcome! Everything is fine.
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -53,10 +54,9 @@ disqus_shortname: https-gracieledamasceno-github-io-dev-on-track
 # Category descriptions (for archive pages)
 descriptions:
   - cat: technology
-    desc: "Posts about tech in general"
-
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+    desc: ""
+  - cat: miscellaneous
+    desc: ""
 
 # Social icons and sharing options
 #
