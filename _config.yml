@@ -4,6 +4,7 @@ plugins:
   - jekyll-archives # Sorry, not GitHub pages friendly!
   - jekyll-sitemap
   - jekyll-paginate-v2
+  - jekyll-polyglot
 
 exclude:
   - "/vendor/"
@@ -21,6 +22,12 @@ baseurl: "/dev-on-track" # the subpath of your site, e.g. /blog/
 url: "https://gracieledamasceno.github.io" # the base hostname & protocol for your site
 cover: "/assets/header-image.jpg"
 logo: "/assets/logo-dot.png"
+source:       .
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Rakefil
 
 # Build settings
 markdown: kramdown
@@ -57,6 +64,11 @@ descriptions:
     desc: ""
   - cat: miscellaneous
     desc: ""
+
+languages: ["en", "pt_BR"]
+default_lang: "en"
+exclude_from_localization: ["assets", "js", "css"]
+parallel_localization: false
 
 # Social icons and sharing options
 #

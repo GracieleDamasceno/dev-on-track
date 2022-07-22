@@ -3,6 +3,7 @@ gem 'jekyll', '<4'
 gem 'jekyll-archives'
 gem 'jekyll-sitemap'
 gem 'jekyll-paginate-v2'
+gem "jekyll-polyglot"
 
 group :development do
     gem 'rake'

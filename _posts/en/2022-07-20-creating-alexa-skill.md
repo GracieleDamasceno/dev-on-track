@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Creating a local Amazon Alexa audio skill"
-date:   2020-07-20T22:00:00-00:00
+date:   2022-07-20T22:00:00-00:00
 author: Graciele Damasceno
 categories: technology
 tags:	tech alexa tutorial
+lang: en
 ---
 
 
@@ -32,7 +33,7 @@ The message `Quick build in progress` will show up. Wait until the build is read
 
 ## Editing the code
 
-The next step is to edit the code adding our audio file! We need to specify a URL that contains an audio that plays itself. You can self-host it at AWS or whatever host of your choice, or search the web to find one. In my example, I'll be using a My Instants audio.
+The next step is to edit the code adding our audio file! We need to specify a URL that contains an audio that plays itself. You can self-host it at AWS or whatever host of your choice, or search the web to find one. In my example, I'll be using a [My Instants][instants] audio.
 
 To edit the code, click at `Code` in the menu. A web code editor will show up with multiple files. The one that we are going to edit is `index.js`, and it should be open.
 
@@ -64,11 +65,12 @@ The magic happens above: at the line `.addAudioPlayerPlayDirective('REPLACE_ALL'
 const speakOutput = 'Its me, Mario!';
     return handlerInput.responseBuilder
         .speak(speakOutput)
-        .addAudioPlayerPlayDirective('REPLACE_ALL', 'https://www.myinstants.com/media/sounds/its-me-mario.mp3', 1, 0, null, null)
+        .addAudioPlayerPlayDirective('REPLACE_ALL', 
+            'https://www.myinstants.com/media/sounds/its-me-mario.mp3', 1, 0, null, null)
         .getResponse();
 {% endhighlight %}
 
-After you added your audio file to the code, you need to `Save` and `Deploy` your code, wait until the deployment is done and that's it! Or is it?
+After you added your audio file to the code, you need to `Save` and `Deploy` your code, wait until the deployment is done and that's it! Or is it? 🤔
 
 ## Activating Test Mode
 
@@ -79,5 +81,6 @@ To finally call your skill in your personal Alexa, there's one last step: activa
 
 This is merely an option to easily create a single-use only skill, to be used locally forever in the development stage. We will not dive into publishing the skill to the world in this tutorial.
 
-[thislink]: https://www.amazon.com/ap/signin
+[thislink]: https://developer.amazon.com/
 [devconsole]: https://developer.amazon.com/alexa/console/ask
+[instants]: https://www.myinstants.com

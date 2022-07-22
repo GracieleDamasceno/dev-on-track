@@ -257,7 +257,7 @@ pre code.hljs {
 	}
 	.site-header-container {
 		color: $white;
-		background-color: $highlight-color;
+		//background-color: $highlight-color;
 		.site-header{
 			.title {
 				color: $white;
@@ -454,3 +454,29 @@ pre code.hljs {
 		}
 	}
 }
+
+$flag-icon-css-path: '../assets' !default;
+
+.flag-icon {
+	position: relative;
+	display: inline-block;
+	width: (4 / 3) * 30px;
+	line-height: 30px;
+	background-size: contain;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	&:before {
+	  content: '\00a0';
+	}
+	&.flag-icon-squared {
+	  width: 1em;
+	}
+  }
+  
+  @mixin flag-icon($country) {
+	.flag-icon-#{$country} {
+	  background-image: url(#{$flag-icon-css-path}/#{$country}.png);
+	}
+  }
+  @include flag-icon(pt_BR);
+  @include flag-icon(en);

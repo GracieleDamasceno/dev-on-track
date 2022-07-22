@@ -3,6 +3,7 @@ layout: page
 title: About Me
 permalink: /about/
 main_nav: true
+lang: en
 ---
 
 ![alt text]({{ site.baseurl }}/assets/profile-picture.jpg "Profile Picture"){:.profile}
