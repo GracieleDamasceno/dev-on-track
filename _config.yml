@@ -11,7 +11,7 @@ exclude:
 
 # Site settings
 title: Dev On Track!
-subtitle:
+subtitle: "Because life is a marathon, not a sprint"
 name: Graciele Damasceno
 description: > 
   Welcome! Everything is fine.
@@ -32,7 +32,7 @@ exclude:
 # Build settings
 markdown: kramdown
 inter_post_navigation: false
-highlightjs_theme: "monokai-sublime"
+highlightjs_theme: "shades-of-purple"
 
 # Pagination Settings
 # https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration

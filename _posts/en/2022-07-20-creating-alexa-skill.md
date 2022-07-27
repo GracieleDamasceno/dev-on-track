@@ -4,10 +4,9 @@ title:  "Creating a local Amazon Alexa audio skill"
 date:   2022-07-20T22:00:00-00:00
 author: Graciele Damasceno
 categories: technology
-tags:	tech alexa tutorial
+tags:    tech alexa tutorial
 lang: en
 ---
-
 
 # Alexa Audio Skill
 
@@ -28,7 +27,7 @@ When everything is ready, click on `Create Skill`. The next page will ask you to
 
 ## Adding an Invocation Name and Audio Interface
 
-With the skill created, the first step is to create an invocation name. This is the sentence/couple of words that Alexa will use to invoke our code. To configure that, we need to click on `Invocation Name` and type the desired invocation in the field below `Skill Invocation Name` and click in `Save Model`. With that set and ready, there's one more configuration that needs to be done: activate our audio interface. In order to do that, click in the `Interfaces` option which is located at the left menu. After that, check the first toogle called `Audio Player` and save the interface and build model.
+With the skill created, the first step is to create an invocation name. This is the sentence/couple of words that Alexa will use to invoke our code. To configure that, we need to click on `Invocation Name` and type the desired invocation in the field below `Skill Invocation Name` and click in `Save Model`. With that set and ready, there's one more configuration that needs to be done: activate our audio interface. In order to do that, click in the `Interfaces` option which is located at the left menu. After that, check the first toggle called `Audio Player` and save the interface and build model.
 The message `Quick build in progress` will show up. Wait until the build is ready and let's go to the next step!
 
 ## Editing the code
@@ -57,7 +56,6 @@ const speakOutput = 'Its me, Mario!';
         .getResponse();
 {% endhighlight %}
 
-
 Explaining briefly, the `speakOutput` corresponds to the line that Alexa will say to you when our code is invoked. You can change the  `It's me, Mario!` to whatever you want, just make sure to write it between simple quotation marks.
 The magic happens above: at the line `.addAudioPlayerPlayDirective('REPLACE_ALL', '*', 1, 0, null, null)`, the `'*'` is the placeholder for our audio link. I replaced it to be like this:
 
@@ -75,7 +73,6 @@ After you added your audio file to the code, you need to `Save` and `Deploy` you
 ## Activating Test Mode
 
 To finally call your skill in your personal Alexa, there's one last step: activating the skill test mode. To do that, just click at  `Test` located in the menu above your code, and change the option besides `Test is disabled for this skill.` to `Development`. Now you can call your Alexa device and say your invocation name to test your skill!
-
 
 ## Final Remarks
 

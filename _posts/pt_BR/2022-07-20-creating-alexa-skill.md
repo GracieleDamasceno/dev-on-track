@@ -4,14 +4,13 @@ title:  "Criando uma skill de audio local na Alexa"
 date:   2022-07-20T22:00:00-00:00
 author: Graciele Damasceno
 categories: technology
-tags:	tech alexa tutorial
+tags:    tech alexa tutorial
 lang: pt_BR
 ---
 
-
 # Skill de Audio da Alexa
 
-Tutorial que mostra como criar uma Alexa Skill facilmente, chamando um arquivo de áudio externo para impressionar seus amigos e familia.
+Tutorial que mostra como criar uma Alexa Skill facilmente, chamando um arquivo de áudio externo para impressionar seus amigos e família.
 O objetivo desse tutorial é ser o mais fácil e direto possível, permitindo a qualquer um - até aqueles que não sabem programar! - criar uma skill de áudio na Alexa. 
 Para começar, vamos simplificar as coisas usando o Console da Alexa Development da Amazon.
 
@@ -34,9 +33,9 @@ A mensagem `Quick build in progress` será exibida. Aguarde até que a compilaç
 
 ## Editando o código
 
-O próximo passo é editar o código adicionando nosso arquivo de áudio! Precisamos especificar um URL que contém um áudio que se reproduz. Você pode auto-hospedá-lo na AWS ou em qualquer host de sua escolha, ou pesquisar na web para encontrar um. No meu exemplo, usarei um áudio do [My Instants][instants].
+O próximo passo é editar o código adicionando nosso arquivo de áudio! Precisamos especificar um URL que contém um áudio que se reproduz. Você pode auto-hospedar o áudio na AWS ou em qualquer host de sua escolha, ou pesquisar na web para encontrar um. No meu exemplo, usarei um áudio do [My Instants][instants].
 
-Para editar o código, clique em `Code` no menu. Um editor de código no navigador aparecerá com vários arquivos. O que vamos editar é o `index.js`, e já deve estar aberto.
+Para editar o código, clique em `Code` no menu. Um editor de código no navegador aparecerá com vários arquivos. O que vamos editar é o `index.js`, e já deve estar aberto.
 
 A próxima parte é fácil: substitua o seguinte código:
 
@@ -58,7 +57,6 @@ const speakOutput = 'Its me, Mario!';
         .getResponse();
 {% endhighlight %}
 
-
 Explicando brevemente, o `speakOutput` corresponde à linha que o Alexa dirá para você quando nosso código for invocado. Você pode mudar o `It's me, Mario!` para o que você quiser, apenas certifique-se de escrever entre aspas simples.
 A mágica acontece assim: na linha  `.addAudioPlayerPlayDirective('REPLACE_ALL', '*', 1, 0, null, null)`, o `'*'` é o espaço reservado para nosso link de áudio. Troquei para ficar assim:
 
@@ -76,7 +74,6 @@ Depois de adicionar seu arquivo de áudio ao código, você precisa `Save` e `De
 ## Ativando o modo de teste
 
 Para finalmente chamar a habilidade em sua Alexa pessoal, há uma última etapa: ativar o modo de teste de habilidade. Para isso, basta clicar em  `Test` localizado no menu acima do seu código, e alterar a opção `Test is disabled for this skill.` para `Development`. Agora você pode chamar sua Alexa e dizer seu nome de invocação para testar sua habilidade!
-
 
 ## Notas finais
 
