@@ -8,11 +8,7 @@ tags:    tech alexa tutorial
 lang: pt_BR
 ---
 
-# Skill de Audio da Alexa
-
 Tutorial que mostra como criar uma Alexa Skill facilmente, chamando um arquivo de áudio externo para impressionar seus amigos e família.
-O objetivo desse tutorial é ser o mais fácil e direto possível, permitindo a qualquer um - até aqueles que não sabem programar! - criar uma skill de áudio na Alexa. 
-Para começar, vamos simplificar as coisas usando o Console da Alexa Development da Amazon.
 
 ## Primeiros passos
 

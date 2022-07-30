@@ -8,10 +8,7 @@ tags:    tech alexa tutorial
 lang: en
 ---
 
-# Alexa Audio Skill
-
 Tutorial on how easily you can create an Alexa Skill calling an external audio file to impress your friends and family.
-This tutorial is meant to be the easiest and straightforward possible, allowing anyone - even those who don't know how to code! - to create an audio skill. To achieve that, we are going to simplify using Amazon's Alexa Development Console. 
 
 ## First Steps
 

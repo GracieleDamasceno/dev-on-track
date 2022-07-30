@@ -8,11 +8,9 @@ tags:    project python astronomy
 lang: en
 ---
 
-## Nasa Exoplanet Archive
+This is a pet project developed to learn more about Python APIs. The main objective here was to gather information using an endpoint that offers exoplanets' data (exoplanets are planets outside our solar system!). The data used in the application comes from Nasa Exoplanet Science Institute website, through an API call. 
 
-This is a pet project developed to learn more about Python APIs. The main objective here was to gather information using a endpoint that offers planet's data. The data used in the application comes from Nasa Exoplanet Science Institute website, through an API call. 
-
-Nasa Exoplanet Archive is an stellar and astronomical exoplanet catalog that collates and cross-correlates data and information about exoplanets. You can check more about the website and the initiative [here][aboutnea].
+Nasa Exoplanet Archive is a stellar and astronomical exoplanet catalog that collates and cross-correlates data and information about exoplanets. You can check more about the website and the initiative [here][aboutnea].
 
 #### Project Details
 
@@ -56,11 +54,11 @@ file_url = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_n
            "discoverymethod,disc_facility,disc_locale,disc_telescope,pl_orbper,pl_rade,pl_bmasse+from+ps&format=json"
 ```
 
-I made the decision to save it all in a Mongo database just to test `MongoClient`'s integration with Pyhton, no other special reason. 😁 And look, at the time of the requisition the archive has 32606 elements! That's pretty cool!
+I made the decision to save it all in a Mongo database just to test `MongoClient`'s integration with Python, no other special reason. And look, at the time of the requisition the archive has 32606 elements! That's pretty cool!
 
 ---
 
-`/planets`: Get all planets paginated with usage of filters (planet name, discovery method, discovery facility, discovery year).
+`/planets`: Get all planets paginated with usage of filters (exoplanet name, discovery method, discovery facility, discovery year).
 
 **Curl**:
 
@@ -127,7 +125,7 @@ curl -X 'GET' \
 }
 ```
 
-**Personal Notes:** I've paginated the response and order it by discovery year. There's also a link that leads to Archive's website, to check more info about the planet in question 🌎
+**Personal Notes:** I've paginated the response and order it by discovery year. There's also a link that leads to Archive's website, to check more info about the exoplanet in question.
 
 ---
 
@@ -147,7 +145,7 @@ curl -X 'GET' \
   <img src="/dev-on-track/assets/posts/2022-07-23/plot-discovery-year.png" title="Chart with number planets by year">
 </a>
 
-**Personal Notes:** Pretty wild to conclude that the number of planets discovered was expressively higher at 2014 and 2016. I had to adjust the chart to display the number of planets using scientific notation, since the discrepancy was so overbearing that the other years almost didn't show up!
+**Personal Notes:** Pretty wild to conclude that the number of planets discovered was expressively higher in 2014 and 2016. I had to adjust the chart to display the number of planets using scientific notation, since the discrepancy was so overbearing that the other years almost didn't show up!
 
 ---
 
@@ -187,7 +185,7 @@ curl -X 'GET' \
   <img src="/dev-on-track/assets/posts/2022-07-23/plot-discovery-facility.png" title="Chart with number planets by discovery facility">
 </a>
 
-**Personal Notes:** [Kepler][kepler] takes the cake as the "facility" that discovered more planets! Way to go! 🚀
+**Personal Notes:** [Kepler][kepler] takes the cake as the "facility" that discovered more planets! Way to go!
 
 ---
 
@@ -207,7 +205,7 @@ curl -X 'GET' \
   <img src="/dev-on-track/assets/posts/2022-07-23/plot-discovery-locale.png" title="Chart with number planets by discovery locale">
 </a>
 
-**Personal Notes:** Space is a privileged point of view to see other planets. There's two instances of "Multiple Locale" that could've been merged, however, I thought that it was amusing and let it that way. 😬
+**Personal Notes:** Space is a privileged point of view to see other planets. There's two instances of "Multiple Locale" that could've been merged, however, I thought that it was amusing and let it that way. 
 
 ---
 
@@ -227,15 +225,13 @@ curl -X 'GET' \
   <img src="/dev-on-track/assets/posts/2022-07-23/plot-discovery-telescope.png" title="Chart with number planets by discovery telescope">
 </a>
 
-**Personal Notes:** It was a shock to discover that in second place to Kepler in number of planets discovered was the Canon 200mm f1.8, a camera over 30 years old! 🤯
+**Personal Notes:** It was a shock to discover that in second place to Kepler in number of planets discovered was the Canon 200mm f1.8, a camera over 30 years old!
 
 ---
 
 ## Final Thoughts
 
 This was one of my first opportunities to work with `pandas` and building charts in Python and I couldn't be happier! I really enjoyed building this tiny API and has lots of fun discovering more about planets, which is one of my personal interests. You can check the [repository with all source code here][repo].
-
-
 
 [aboutnea]: https://exoplanetarchive.ipac.caltech.edu/docs/intro.html
 
