@@ -50,8 +50,11 @@ curl -X 'GET' \
 **Observações pessoais:** este endpoint *pode* demorar um pouco para carregar. Tentei pegar leve ao construir a solicitação da API para o site da Nasa, selecionando apenas mais alguns parâmetros mais "interessantes" para construir meu banco de dados local:
 
 ```python
-file_url = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,sy_snum,sy_pnum,disc_year," \
-           "discoverymethod,disc_facility,disc_locale,disc_telescope,pl_orbper,pl_rade,pl_bmasse+from+ps&format=json"
+file_url = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?" \
+                "query=select+pl_name,sy_snum,sy_pnum,disc_year," \
+                "discoverymethod,disc_facility,disc_locale," \    
+                "disc_telescope,pl_orbper,pl_rade,pl_bmasse+" \
+                "from+ps&format=json"
 ```
 
 Tomei a decisão de salvar tudo em um banco de dados Mongo apenas para testar a integração do `MongoClient` com o Pyhton, sem nenhum outro motivo especial além disso. E olha, no momento que fiz essa requisição arquivo da Nasa possui 32606 elementos! Isso é bem legal!

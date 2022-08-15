@@ -50,8 +50,11 @@ curl -X 'GET' \
 **Personal Notes:** This endpoint *may* take a while to load. I tried to be gentle while building the API request to the archive, selecting only a few more "interesting" parameters in order to build my local database:
 
 ```python
-file_url = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,sy_snum,sy_pnum,disc_year," \
-           "discoverymethod,disc_facility,disc_locale,disc_telescope,pl_orbper,pl_rade,pl_bmasse+from+ps&format=json"
+file_url = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync?" \
+                "query=select+pl_name,sy_snum,sy_pnum,disc_year," \
+                "discoverymethod,disc_facility,disc_locale," \    
+                "disc_telescope,pl_orbper,pl_rade,pl_bmasse+" \
+                "from+ps&format=json"
 ```
 
 I made the decision to save it all in a Mongo database just to test `MongoClient`'s integration with Python, no other special reason. And look, at the time of the requisition the archive has 32606 elements! That's pretty cool!

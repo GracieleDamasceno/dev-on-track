@@ -32,7 +32,7 @@ exclude:
 # Build settings
 markdown: kramdown
 inter_post_navigation: false
-highlightjs_theme: "shades-of-purple"
+highlightjs_theme: "panda-syntax-light"
 
 # Pagination Settings
 # https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
@@ -40,7 +40,7 @@ pagination:
   enabled: true
   per_page: 5
   permalink: "/page/:num/"
-  sort_reverse: false
+  sort_reverse: true
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives:
