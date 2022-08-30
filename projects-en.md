@@ -10,7 +10,6 @@ lang: en
 
 **[Nasa's Exoplanet Archive][nasa-exoplanet-archive]**: A small Python project that gather and displays data about NASA's exoplanets, from NASA's datasource.
 
-
 <br>
 <br>
 <br>
