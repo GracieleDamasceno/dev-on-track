@@ -64,6 +64,8 @@ descriptions:
     desc: ""
   - cat: miscellaneous
     desc: ""
+  - cat: personal
+    desc: ""
 
 languages: ["en", "pt_BR"]
 default_lang: "en"
