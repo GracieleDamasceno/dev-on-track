@@ -4,7 +4,7 @@ title:  "Padrões de Projeto - Factory"
 date:   2022-08-29T08:00:00-00:00
 author: Graciele Damasceno
 categories: technology
-tags:    tutorial padroes-projeto java
+tags:    tutorial padroes-projeto java factory
 lang: pt_BR
 ---
 

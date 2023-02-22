@@ -4,7 +4,7 @@ title:  "Design Patterns - Factory"
 date:   2022-08-29T08:00:00-00:00
 author: Graciele Damasceno
 categories: technology
-tags:    tutorial design-pattern java
+tags:    tutorial design-pattern java factory
 lang: en
 ---
 
